@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Add Beer</title>
+<link href="https://fonts.googleapis.com/css?family=Krona+One"
+	rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>tagline</th>
+				<th>first_brewed</th>
+				<th>description</th>
+				<th>image_url</th>
+				<th>ibu</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="beer : ${beer}">
+				<td th:text="${beer.id}"></td>
+				<td th:text="${beer.name}"></td>
+				<td th:text="${beer.tagline}"></td>
+				<td th:text="${beer.first_brewed}"></td>
+				<td th:text="${beer.description}"></td>
+				<td th:text="${beer.image_url}"></td>
+				<td th:text="${beer.ibu}"></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
